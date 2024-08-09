@@ -1,10 +1,10 @@
 
-const ListTask = ({task}) => {
+const ListTask = ({task, date}) => {
 
   return (
     <div>
         <ul>
-            <li>{task} <div><button>Edit</button> <button>Delete</button></div></li>
+            <li>{task} {date}<div><button>Edit</button> <button>Delete</button></div></li>
         </ul>
     </div>
   )
