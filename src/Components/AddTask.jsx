@@ -23,7 +23,8 @@ const AddTask = () => {
       <div className="form">
         <form onSubmit={HandleTask} className="task-form">
           <div className="task-input">
-            <input className="add-task"
+            <input
+              className="add-task"
               type="text"
               value={task}
               placeholder="Add the task"
@@ -41,16 +42,22 @@ const AddTask = () => {
               required
             />
           </div>
-          <button className="add-button" type="submit">Add</button>
+          <button className="add-button" type="submit">
+            Add
+          </button>
         </form>
       </div>
       <div className="task-list">
         <h2>Task Lists</h2>
-        {taskList.length > 0
-          ? taskList.map((item, index) => {
-              return <ListTask key={index} task={item.task} date={item.date} />;
-            })
-          : "No task available"}
+        <div className="task-box">
+          {taskList.length > 0
+            ? taskList.map((item, index) => {
+                return (
+                  <ListTask key={index} task={item.task} date={item.date} />
+                );
+              })
+            : "No task available"}
+        </div>
       </div>
     </div>
   );

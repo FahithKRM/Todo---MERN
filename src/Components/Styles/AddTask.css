@@ -30,3 +30,7 @@
 .task-list{
     margin-top: 20px;
 }
+
+.task-box{
+    border: 1px solid black;
+}
